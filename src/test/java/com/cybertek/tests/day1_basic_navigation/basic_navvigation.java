@@ -15,6 +15,8 @@ public class basic_navvigation {
 
         //open browser
         driver.get("https://www.amazon.com");
+
+        //get the title and print it
         System.out.println(driver.getTitle());
 
     }
