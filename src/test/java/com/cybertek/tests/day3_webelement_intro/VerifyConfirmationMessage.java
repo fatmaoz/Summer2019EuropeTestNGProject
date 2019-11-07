@@ -50,7 +50,7 @@ public class VerifyConfirmationMessage {
         retrrievePasswordButton.click();
 
 
-        String expectedMessage = "Your e-mail's been sent!";
+        String expectedMessage = "Your e-mail's been sent!,";
 
         WebElement messageElement = driver.findElement(By.name("confirmation_message"));
 
