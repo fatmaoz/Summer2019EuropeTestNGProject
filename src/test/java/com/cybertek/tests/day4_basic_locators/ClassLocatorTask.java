@@ -21,7 +21,7 @@ public class ClassLocatorTask {
         driver.get("http://practice.cybertekschool.com/multiple_buttons");
 
 
-        System.out.println(driver.findElement(By.className("h3")).getText());//Lazy way
+       // System.out.println(driver.findElement(By.className("h3")).getText());//Lazy way
 
         WebElement messageElement = driver.findElement(By.className("h3"));
         String message = messageElement.getText();
