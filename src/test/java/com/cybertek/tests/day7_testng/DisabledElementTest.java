@@ -31,11 +31,15 @@ public class DisabledElementTest {
     }
 
     @Test
-    public void test2(){
+    public void test2() throws InterruptedException {
         WebDriver driver = WebDriverFactory.getDriver("chrome");
 
         driver.get("http://practice.cybertekschool.com/dynamic_controls");
 
 
+        WebElement inputBox = driver.findElement(By.cssSelector("#input-example>input"));
+        System.out.println("is input enabled: " + inputBox.isEnabled());
+        Thread.sleep(3000);
+        inputBox.sendKeys("Mike Smith");
     }
 }
