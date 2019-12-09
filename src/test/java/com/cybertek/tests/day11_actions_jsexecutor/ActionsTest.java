@@ -2,6 +2,7 @@ package com.cybertek.tests.day11_actions_jsexecutor;
 
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -70,6 +71,38 @@ public class ActionsTest {
         actions.moveToElement(source).clickAndHold().moveToElement(target).pause(2000).release().build().perform();
     }
 
+    @Test
+    public void type(){
+        driver.get("http://practice.cybertekschool.com/dynamic_controls");
 
+
+        WebElement inputbox = driver.findElement(By.cssSelector("input[type='text']"));
+
+    //    inputbox.sendKeys("fatma" );
+
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        String str ="hello world";
+
+        jse.executeScript("arguments[0].setAttribute('value', '" + str + "')",inputbox);
+    }
+
+
+    @Test
+    public void Scroll() throws InterruptedException {
+        driver.get("http://practice.cybertekschool.com/infinite_scroll");
+
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        for (int i = 0; i < 10; i++) {
+            Thread.sleep(500);
+            jse.executeScript("window.scrollBy(0,250)");
+        }
+
+        for (int i = 0; i < 5; i++) {
+           Thread.sleep(500);
+           //scrollUp
+            jse.executeScript("window.scrollBy(0,-250)");
+        }
+
+    }
 
 }
