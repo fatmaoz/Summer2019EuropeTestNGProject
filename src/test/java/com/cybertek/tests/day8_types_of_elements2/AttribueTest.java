@@ -14,7 +14,7 @@ public class AttribueTest {
          WebDriver driver = WebDriverFactory.getDriver("chrome");
          driver.get("http://practice.cybertekschool.com/radio_buttons");
 
-        WebElement radioButton = driver.findElement(By.id("blue"));
+        WebElement radioButton = driver.findElement(By.id("red"));
 
         // get the value of name attribute
         System.out.println(radioButton.getAttribute("name"));
