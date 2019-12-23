@@ -22,6 +22,7 @@
             <version>1.0.1</version>
         </dependency>
 
+
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
@@ -48,6 +49,12 @@
             <scope>test</scope>
         </dependency>
 
+
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>4.0.9</version>
+        </dependency>
 
 
     </dependencies>

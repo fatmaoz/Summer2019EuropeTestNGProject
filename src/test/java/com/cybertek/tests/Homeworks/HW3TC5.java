@@ -52,14 +52,14 @@ public class HW3TC5 {
         WebElement allChecks = driver.findElement(By.xpath("//table/thead/tr/th/div/button/input"));
         allChecks.click();
 
-        boolean actualResult = getNumberOfRows();
+        boolean actualResult = findChecks ();
 
         Assert.assertEquals(actualResult,allChecks.isSelected());
 
 
 
     }
-    private boolean getNumberOfRows() {
+    private boolean findChecks() {
         List<WebElement> allRows = driver.findElements(By.xpath("//tbody/tr"));
 
         boolean flag = false;

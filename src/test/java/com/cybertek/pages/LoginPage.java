@@ -14,17 +14,17 @@ public class LoginPage {
     //driver.findElement(By.id("prependendedInput")); ile FindBy() aynı
 
 
-    @FindBy(name ="_username")
+    @FindBy(id ="prependedInput")
     public WebElement usernameInput;
 
     @FindBy(id ="prependedInput2")
-    public WebElement passwordInput;
+    public  WebElement passwordInput;
 
     @FindBy(id ="_submit")
-    public WebElement loginBtn;
+    public  WebElement loginBtn;
 
 
-    public void login(String usernameStr,String passwordStr){
+    public  void login(String usernameStr,String passwordStr){
 
         usernameInput.sendKeys(usernameStr);
         passwordInput.sendKeys(passwordStr);
